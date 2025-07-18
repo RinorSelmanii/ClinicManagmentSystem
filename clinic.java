@@ -84,7 +84,8 @@ public class clinic {
             System.out.println("1. Add Patient");
             System.out.println("2. Find patient by name");
             System.out.println("3. See all patients");
-            System.out.println("4. Exit");
+            System.out.println("4. Delete patient");
+            System.out.println("5. Exit");
             String task = scan.nextLine();
 
             switch (task) {
@@ -144,6 +145,12 @@ public class clinic {
                     break;
 
                 case "4":
+                    System.out.println("Enter patient name");
+                    String pname = scan.nextLine();
+                    Clinic.deletePatient(pname);
+                    break;
+
+                case "5":
                     System.out.println("Exiting...");
                     return;
 
