@@ -36,6 +36,26 @@ public class clinic {
         }
     }
 
+    public void deletePatient(String name) {
+        boolean found = false;
+        for (int i = 0; i < index; i++) {
+            if (patients[i].getName().equalsIgnoreCase(name)) {
+                
+                for (int j = i; j < index - 1; j++) {
+                    patients[j] = patients[j + 1];
+                }
+                patients[--index] = null; 
+                System.out.println("Patient " + name + " deleted.");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Patient not found.");
+        }
+    }
+    
+
     public void printAll() {
         for (int i = 0; i < index; i++) {
             System.out.println(patients[i]);
