@@ -41,7 +41,7 @@ public class patient {
         }
 
             public String toString(){
-                return "Patient "+name+": day: "+date+" - clock:"+time +":Type "+consult;
+                return "Patient: "+name+", date:"+date+" at "+time +" o'clock, for "+consult;
             }
 
             public boolean equals(Object obj){
